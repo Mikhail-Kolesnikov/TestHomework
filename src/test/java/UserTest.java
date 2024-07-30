@@ -11,7 +11,10 @@ class UserTest {
 
 
     }
-
+    @Test
+    void Login_Example_Null() {
+        assertNull(null, user.getLogin());
+    }
     @Test
     void Password_Example_Success() {
         assertEquals("Password", user.getPassword());
@@ -49,8 +52,13 @@ class UserTest {
     }
 
     @Test
-    void isValidPassword_try_or_false() {
+    void isValidPassword_try_true() {
         assertTrue(user.isValidPassword("Password"));
+
+    }
+    @Test
+    void isValidPassword_try_false() {
+
         assertFalse(user.isValidPassword("False"));
     }
 }
