@@ -60,6 +60,7 @@ class UserTest {
     void isValidPassword_try_false() {
 
         assertFalse(user.isValidPassword("False"));
+        System.out.println();
     }
 }
 
